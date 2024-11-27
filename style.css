@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  height: 100dvh;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
