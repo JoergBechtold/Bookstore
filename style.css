@@ -1,0 +1,93 @@
+/* Everything that is global comes in here */
+body {
+  margin: 0;
+  /* height: 100dvh; */
+  background-color: #d0c8b9;
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  padding-bottom: 40px;
+  margin: 40px 90px;
+  border-radius: var(--border-radius);
+  background-color: var(--dark-gray);
+  box-shadow: var(--box-shadow-big);
+  height: fit-content;
+  width: 100%;
+}
+
+.navbar {
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  padding: 8px 12px 8px 12px;
+  height: 100px;
+  width: 100%;
+  background-color: var(--dark-gray);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-icon-headline {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-icon-headline img {
+  height: 70px;
+  aspect-ratio: 1/1;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-right: 50px;
+}
+
+.navbar-links a {
+  color: var(--color-text);
+  font-size: 20px;
+  transition: 0.225s ease-out;
+}
+
+.navbar-links a:hover {
+  color: white;
+  text-decoration: underline;
+  scale: 1.1;
+}
+
+.background-img {
+  box-shadow: var(--box-shadow);
+}
+
+.background-img img {
+  width: 100%;
+}
+
+.headline-bestseller {
+  padding: var(--padding-left-right);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin-top: var(--margin-top);
+  margin-bottom: var(--margin-bottom);
+}
+
+.line-decoration {
+  background-color: var(--color-text);
+  height: 1.5px;
+  width: 100%;
+  border-radius: 50px;
+}
