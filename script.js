@@ -2,7 +2,7 @@ let books = [
   {
     name: 'Die Geheimnisse des Ozeans',
     author: 'Clara Meer',
-    bookImg: 'img/Die_Geheimnisse_des_Ozeans.png',
+    bookImg: 'assets/img/Die_Geheimnisse_des_Ozeans.png',
     likes: 1250,
     liked: true,
     price: 19.99,
@@ -34,7 +34,7 @@ let books = [
   {
     name: 'Der vergessene Pfad',
     author: 'Maximilian Schwarz',
-    bookImg: 'img/Der_vergessene_Pfad.png',
+    bookImg: 'assets/img/Der_vergessene_Pfad.png',
     likes: 980,
     liked: false,
     price: 14.5,
@@ -45,7 +45,7 @@ let books = [
   {
     name: 'Die Farben des Himmels',
     author: 'Laura Blau',
-    bookImg: 'img/Die_Farben_des_Himmels.png',
+    bookImg: 'assets/img/Die_Farben_des_Himmels.png',
     likes: 1520,
     liked: true,
     price: 22.95,
@@ -77,7 +77,7 @@ let books = [
   {
     name: 'Das Rätsel der Zeit',
     author: 'Alexander Weiss',
-    bookImg: 'img/Das_Rätsel_der_Zeit.jpg',
+    bookImg: 'assets/img/Das_Rätsel_der_Zeit.jpg',
     likes: 750,
     liked: false,
     price: 18.0,
@@ -97,7 +97,7 @@ let books = [
   {
     name: 'Der letzte Wächter',
     author: 'Sabine Grün',
-    bookImg: 'img/Der_Letzte_Wächter.jpg',
+    bookImg: 'assets/img/Der_Letzte_Wächter.jpg',
     likes: 1300,
     liked: true,
     price: 16.75,
@@ -108,7 +108,7 @@ let books = [
   {
     name: 'Im Schatten des Mondes',
     author: 'Philipp Silber',
-    bookImg: 'img/Im_Schatten_des_Mondes.jpg',
+    bookImg: 'assets/img/Im_Schatten_des_Mondes.jpg',
     likes: 890,
     liked: false,
     price: 12.3,
@@ -128,7 +128,7 @@ let books = [
   {
     name: 'Jenseits der Sterne',
     author: 'Oliver Schwarz',
-    bookImg: 'img/Jenseits_der_Sterne.jpg',
+    bookImg: 'assets/img/Jenseits_der_Sterne.jpg',
     likes: 1450,
     liked: true,
     price: 21.0,
@@ -144,7 +144,7 @@ let books = [
   {
     name: 'Das verborgene Königreich',
     author: 'Elena Gold',
-    bookImg: 'img/Das_verborgene_Königreich.jpg',
+    bookImg: 'assets/img/Das_verborgene_Königreich.jpg',
     likes: 920,
     liked: false,
     price: 17.5,
@@ -160,7 +160,7 @@ let books = [
   {
     name: 'Liebe in Zeiten des Krieges',
     author: 'Emilia Rot',
-    bookImg: 'img/Liebe_in_Zeiten_des_Krieges.jpg',
+    bookImg: 'assets/img/Liebe_in_Zeiten_des_Krieges.jpg',
     likes: 1800,
     liked: true,
     price: 19.99,
@@ -183,24 +183,21 @@ let books = [
   },
 ];
 
-function init() {
-  let blabla = document.getElementById('blabla');
-  blabla.innerHTML = '';
+function generateAllBooks() {
+  let bestsellerBookSection = document.getElementById('bestseller-book-section');
+  bestsellerBookSection.innerHTML = '';
 
   for (let i = 0; i < books.length; i++) {
-    // let bookName = books[i].name;
-
-    blabla.innerHTML += /*html*/ `
-        <!-- <p>${books[i].name}</p>
-        <img src="${books[i].bookImg}" alt="Bild vom Buch ${books[i].name}"> -->
-  
-        <div onclick="console(${i})" class="card" style="width: 18rem;">
-         <img src="${books[i].bookImg}" class="card-img-top" alt="Bild vom Buch ${books[i].name}">
-         <div class="card-body">
-          <p class="card-text">${books[i].name}</p>
-         </div>
-        </div>
-  
+    bestsellerBookSection.innerHTML += /*html*/ `
+        
+        <div onclick="console(${i})" class="single-book-main-view">
+        <span><u>${books[i].genre}</u></span>
+            <img src="${books[i].bookImg}" alt="Bild vom Buch ${books[i].name}" />
+            <span>${books[i].name}</span>
+            
+            <span style="font-weight: 100">${books[i].author}</span>
+            <span>${books[i].price}€</span>
+          </div>
         `;
   }
 }

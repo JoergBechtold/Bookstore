@@ -16,7 +16,7 @@ body {
 
 .main-container {
   padding-bottom: 40px;
-  margin: 40px 90px;
+  margin: 60px 90px;
   border-radius: var(--border-radius);
   background-color: var(--dark-gray);
   box-shadow: var(--box-shadow-big);
