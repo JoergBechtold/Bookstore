@@ -4,6 +4,10 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 55px;
+
+  /* &:hover .single-book-main-view:not(:hover) {
+    scale: 1.1;
+  } */
 }
 
 .single-book-main-view {
@@ -20,7 +24,8 @@
   scale: 1.1;
 }
 
-/* .single-book-main-view:hover > :not(:hover) {
+/* .bestseller-book-section:hover > :not(:hover) {
+  
   filter: blur(5px);
   opacity: 0.5;
 } */
