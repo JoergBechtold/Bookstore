@@ -4,10 +4,6 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 55px;
-
-  /* &:hover .single-book-main-view:not(:hover) {
-    scale: 1.1;
-  } */
 }
 
 .single-book-main-view {
@@ -18,16 +14,14 @@
   width: 200px;
   transition: 0.225s ease-in-out;
   cursor: pointer;
+
+  &:hover {
+    scale: 1.1;
+  }
 }
 
-.single-book-main-view:hover {
+/* .single-book-main-view:hover {
   scale: 1.1;
-}
-
-/* .bestseller-book-section:hover > :not(:hover) {
-  
-  filter: blur(5px);
-  opacity: 0.5;
 } */
 
 .single-book-main-view img {
