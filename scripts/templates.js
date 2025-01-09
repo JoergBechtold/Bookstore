@@ -1,5 +1,5 @@
 //Template for generate All Books
-function templateGenerateAllBooks(i) {
+function templateGenerateAllBooks(i, newPrice) {
   return /*html*/ `
          <div onclick="console(${i})" class="single-book-main-view">
             <span><u>${books[i].genre}</u></span>
@@ -7,7 +7,7 @@ function templateGenerateAllBooks(i) {
             <span>${books[i].name}</span>
             
             <span style="font-weight: 100">${books[i].author}</span>
-            <span>${books[i].price}€</span>
+            <span>${newPrice}€</span>
           </div>
         `;
 }

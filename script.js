@@ -188,10 +188,8 @@ function generateAllBooks() {
   bestsellerBookSection.innerHTML = '';
 
   for (let i = 0; i < books.length; i++) {
-    bestsellerBookSection.innerHTML += templateGenerateAllBooks(i); //Function in templates.js folder
-  }
-}
+    let newPrice = changeThePrice(i);
 
-function console(i) {
-  alert('das ist das Buch "' + books[i].name + '"');
+    bestsellerBookSection.innerHTML += templateGenerateAllBooks(i, newPrice); //Function in templates.js folder
+  }
 }
