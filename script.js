@@ -1,5 +1,4 @@
 let myProfileName = 'jörg_Bechtold123';
-let myProfilePicture = 'assets/img/profile-picture.jpg';
 
 let books = [
   {
@@ -195,4 +194,8 @@ function generateAllBooks() {
 
     bestsellerBookSection.innerHTML += templateGenerateAllBooks(i, newPrice); //Function in scripts.js folder
   }
+}
+
+function eventBubbling(event) {
+  event.stopPropagation();
 }

@@ -56,10 +56,10 @@
       </section>
 
       <section>
-        <div style="display: none" class="fullscreen-overlay" id="fullscreen_overlay">
+        <div onclick="closeFullscreenOverlay()" style="display: none" class="fullscreen-overlay" id="fullscreen_overlay">
           <!-- generate book content on click here -->
 
-          <div class="container-bookdetails">
+          <div onclick="eventBubbling(event)" class="container-bookdetails">
             <div onclick="closeFullscreenOverlay()" class="close-icon-overlay">
               <img src="assets/icons/icon-close-50.png" />
             </div>
