@@ -1,3 +1,6 @@
+let myProfileName = 'jörg_Bechtold123';
+let myProfilePicture = 'assets/img/profile-picture.jpg';
+
 let books = [
   {
     name: 'Die Geheimnisse des Ozeans',

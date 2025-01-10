@@ -7,6 +7,7 @@
 
     <!-- Embedding scripts -->
     <!-- Scripts/templates must always be included before the normal scripts.js! -->
+    <script src="scripts/openCloseOverlay.js"></script>
     <script src="scripts/changeThePrice.js"></script>
     <script src="scripts/templates.js"></script>
     <script src="script.js"></script>
@@ -55,17 +56,23 @@
       </section>
 
       <section>
-        <div style="display: none" class="fullscreen-bookdetails" id="fullscreen_bookdetails">
+        <div style="display: none" class="fullscreen-overlay" id="fullscreen_overlay">
           <!-- generate book content on click here -->
 
           <div class="container-bookdetails">
-            <div class="headline-bookdetails">
-              <h1>Die Geheimnisse des Ozeans</h1>
+            <div onclick="closeFullscreenOverlay()" class="close-icon-overlay">
+              <img src="assets/icons/icon-close-50.png" />
             </div>
-            <div class="img-bookdetails">
-              <img src="assets/img/Die_Geheimnisse_des_Ozeans.png" alt="..." />
+            <div class="">
+              <h1 id="headline_bookdetails"></h1>
+              <!--Change innerHTML in javascript-->
+            </div>
+            <div class="">
+              <img id="img_bookdetails" src="" alt="" />
+              <!--Change img in javascript-->
             </div>
             <div class="content-bookdestails"></div>
+
             <div class="comments-bookdetails"></div>
           </div>
         </div>
