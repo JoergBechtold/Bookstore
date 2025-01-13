@@ -1,5 +1,7 @@
 let myProfileName = 'jörg_Bechtold123';
 
+let newPrice = 0;
+
 let books = [
   {
     name: 'Die Geheimnisse des Ozeans',
@@ -190,12 +192,8 @@ function generateAllBooks() {
   bestsellerBookSectionRef.innerHTML = '';
 
   for (let i = 0; i < books.length; i++) {
-    let newPrice = changeThePrice(i); //Function in scripts.js folder
+    newPrice = changeThePrice(i); //Function in scripts.js folder
 
     bestsellerBookSectionRef.innerHTML += templateGenerateAllBooks(i, newPrice); //Function in scripts.js folder
   }
-}
-
-function eventBubbling(event) {
-  event.stopPropagation();
 }
