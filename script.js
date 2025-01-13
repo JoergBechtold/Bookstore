@@ -186,22 +186,14 @@ let books = [
 ];
 
 function generateAllBooks() {
-  let bestsellerBookSection = document.getElementById('bestseller-book-section');
-  bestsellerBookSection.innerHTML = '';
+  let bestsellerBookSectionRef = document.getElementById('bestseller-book-section');
+  bestsellerBookSectionRef.innerHTML = '';
 
   for (let i = 0; i < books.length; i++) {
     let newPrice = changeThePrice(i); //Function in scripts.js folder
 
-    bestsellerBookSection.innerHTML += templateGenerateAllBooks(i, newPrice); //Function in scripts.js folder
-
-    greateOverlayBookContent(i);
+    bestsellerBookSectionRef.innerHTML += templateGenerateAllBooks(i, newPrice); //Function in scripts.js folder
   }
-}
-
-function greateOverlayBookContent(i) {
-  document.getElementById('headline_bookdetails').innerHTML = books[i].name;
-  document.getElementById('img_bookdetails').alt = `Bild vom Buch ${books[i].name}`;
-  document.getElementById('img_bookdetails').src = books[i].bookImg;
 }
 
 function eventBubbling(event) {

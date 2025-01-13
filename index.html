@@ -52,32 +52,12 @@
 
       <section>
         <div id="bestseller-book-section" class="bestseller-book-section"></div>
-        <!-- generates all the books here -->
+        <!-- generates all the books here / script.js -->
       </section>
 
       <section>
-        <div onclick="closeFullscreenOverlay()" style="display: none" class="fullscreen-overlay" id="fullscreen_overlay">
-          <div onclick="eventBubbling(event)" class="container-bookdetails">
-            <div onclick="closeFullscreenOverlay()" class="close-icon-overlay">
-              <img src="assets/icons/icon-close-50.png" />
-            </div>
-            <div style="display: flex; gap: 40px">
-              <!--Change img in javascript-->
-              <div class="">
-                <img class="img-bookdetails" id="img_bookdetails" src="" alt="" />
-              </div>
-              <div>
-                <!--Change headline h1 in javascript-->
-                <div style="flex-direction: column" class="">
-                  <h1 id="headline_bookdetails"></h1>
-                </div>
-
-                <div class="content-bookdestails"></div>
-
-                <div class="comments-bookdetails"></div>
-              </div>
-            </div>
-          </div>
+        <div onclick="closeFullscreenOverlay()" style="display: " class="fullscreen-overlay" id="fullscreen_overlay">
+          <!-- generates fullscreen overlay book content here / openCloseOverlay.js -->
         </div>
       </section>
     </main>
