@@ -193,7 +193,15 @@ function generateAllBooks() {
     let newPrice = changeThePrice(i); //Function in scripts.js folder
 
     bestsellerBookSection.innerHTML += templateGenerateAllBooks(i, newPrice); //Function in scripts.js folder
+
+    greateOverlayBookContent(i);
   }
+}
+
+function greateOverlayBookContent(i) {
+  document.getElementById('headline_bookdetails').innerHTML = books[i].name;
+  document.getElementById('img_bookdetails').alt = `Bild vom Buch ${books[i].name}`;
+  document.getElementById('img_bookdetails').src = books[i].bookImg;
 }
 
 function eventBubbling(event) {
