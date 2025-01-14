@@ -33,6 +33,26 @@ let books = [
         name: 'NovelLover',
         comment: 'Ein Buch, das voller magischer Überraschungen steckt und mich begeistert hat.',
       },
+      {
+        name: 'Leser123',
+        comment: 'Ein faszinierendes Abenteuerbuch, das mich von der ersten Seite an gefesselt hat.',
+      },
+      {
+        name: 'Leser123',
+        comment: 'Ein faszinierendes Abenteuerbuch, das mich von der ersten Seite an gefesselt hat.',
+      },
+      {
+        name: 'Leser123',
+        comment: 'Ein faszinierendes Abenteuerbuch, das mich von der ersten Seite an gefesselt hat.',
+      },
+      {
+        name: 'Leser123',
+        comment: 'Ein faszinierendes Abenteuerbuch, das mich von der ersten Seite an gefesselt hat.',
+      },
+      {
+        name: 'Leser123',
+        comment: 'Ein faszinierendes Abenteuerbuch, das mich von der ersten Seite an gefesselt hat.',
+      },
     ],
   },
   {
@@ -192,8 +212,31 @@ function generateAllBooks() {
   bestsellerBookSectionRef.innerHTML = '';
 
   for (let i = 0; i < books.length; i++) {
+    book = books[i];
     newPrice = changeThePrice(i); //Function in scripts.js folder
 
     bestsellerBookSectionRef.innerHTML += templateGenerateAllBooks(i, newPrice); //Function in scripts.js folder
   }
+}
+
+function forLoobAllComments(i) {
+  let commentsContainerRef = document.getElementById(`comments_container${i}`);
+  commentsContainerRef.innerHTML = '';
+
+  for (let j = 0; j < books[i].comments.length; j++) {
+    let bookCommentUsername = books[i].comments[j].name;
+    let bookComment = books[i].comments[j].comment;
+
+    commentsContainerRef.innerHTML += tamplateGenerateHtmlComments(bookCommentUsername, bookComment); //Function in templates.js folder
+  }
+}
+
+/* number of Like Plus */
+function numberoOfLikesPlus(i) {
+  books[i].likes++;
+}
+
+/* number of Likes Minus */
+function numberofLikesMinus(i) {
+  books[i].likes--;
 }
