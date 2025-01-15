@@ -67,11 +67,13 @@ body {
 
 a {
   text-decoration: none;
+  white-space: nowrap;
 }
 
 h1 {
   font-size: 24px;
   color: var(--color-text);
+  white-space: nowrap;
 }
 
 h2 {
@@ -86,4 +88,12 @@ span {
   color: var(--color-text);
   font-weight: bold;
   font-size: 18px;
+}
+
+th,
+td {
+  font-size: 20px;
+  color: var(--dark-gray);
+  text-align: left;
+  white-space: nowrap;
 }

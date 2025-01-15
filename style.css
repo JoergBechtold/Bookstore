@@ -46,10 +46,25 @@
   transition: 0.225s ease-out;
 }
 
-.navbar-links a:hover {
+.navbar-links a:hover,
+.navbar-links a:focus,
+.navbar-links a:active {
   color: white;
   text-decoration: underline;
   scale: 1.1;
+}
+
+.burger-menu {
+  margin-right: 25px;
+  display: none;
+}
+
+.burger-menu img {
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  width: 45px;
+  aspect-ratio: 1/1;
 }
 
 .background-img {
@@ -181,7 +196,9 @@ p {
   cursor: pointer;
 }
 
-.close-icon-overlay:hover {
+.close-icon-overlay:hover,
+.close-icon-overlay:focus,
+.close-icon-overlay:active {
   border-radius: 10px;
   background: #986552;
   box-shadow: inset 5px 5px 10px #754e3f, inset -5px -5px 10px #bb7c65;
@@ -204,14 +221,6 @@ p {
 .bookdetails-table {
   padding: var(--padding-top-bottom);
   border-bottom: 1px solid var(--dark-gray);
-}
-
-th,
-td {
-  font-size: 20px;
-  color: var(--dark-gray);
-  text-align: left;
-  white-space: nowrap;
 }
 
 .comments-bookdetails {
@@ -305,8 +314,9 @@ td {
   background: #986552;
   box-shadow: 5px 5px 10px #754e3f, -5px -5px 10px #bb7c65;
 }
-
-.btn-new-post:enabled:hover {
+.btn-new-post:enabled:hover,
+.btn-new-post:enabled:focus,
+.btn-new-post:enabled:active {
   border-radius: 10px;
   background: #986552;
   box-shadow: inset 5px 5px 10px #754e3f, inset -5px -5px 10px #bb7c65;
