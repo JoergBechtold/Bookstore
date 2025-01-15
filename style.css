@@ -1,32 +1,4 @@
 /* Everything that is global comes in here */
-body {
-  margin: 0;
-  background-color: #d0c8b9;
-  display: flex;
-}
-
-:root {
-  /* color */
-  --dark-gray: #1f2a34;
-  --blue: #1c8adb;
-  --color-text: #986552;
-
-  /* border */
-  --border-radius: 10px;
-
-  /* box-shadow */
-  --box-shadow-small: 0px 4px 6px rgba(0, 0, 0, 0.3);
-  --box-shadow-big: 15px 14px 12px 8px #212121e6;
-  --box-shadow-book: 9px 10px 17px 9px hsl(0deg 0.51% 6.42%);
-
-  /* margin */
-  --margin-top: 30px;
-  --margin-bottom: 30px;
-
-  /* padding */
-  --padding-left-right: 0 60px 0 60px;
-  --padding-top-bottom: 20px 0 20px 0;
-}
 
 .main-container {
   padding-bottom: 40px;
@@ -115,13 +87,16 @@ body {
   display: grid;
   place-items: center;
   backdrop-filter: blur(10px);
-  transition: all 0.5s ease;
+  /* transition: all 0.5s ease; */
 }
 
 .container-bookdetails {
   position: relative;
-  overflow: hidden;
-  height: 85%;
+  /* overflow: hidden; */
+  /* height: 85%; */
+  /* height: 90dvh; */
+  max-height: 80%;
+  min-height: 20%;
   width: 50%;
   display: flex;
   align-items: start;
@@ -270,7 +245,7 @@ td {
   margin-top: 10px;
   overflow-y: scroll;
   padding: var(--padding-top-bottom);
-  border-bottom: 1px solid var(--dark-gray);
+  /* border-bottom: 1px solid var(--dark-gray); */
 }
 
 .comments-container::-webkit-scrollbar {
@@ -299,8 +274,6 @@ td {
 
 .comment-username,
 .comment-usertext span {
-  /* white-space: normal; */
-  /* word-wrap: break-word; */
   overflow-wrap: break-word;
   text-wrap: pretty;
 }
@@ -312,4 +285,44 @@ td {
 .comments-bookdetails h2,
 .comments-container span {
   color: var(--dark-gray);
+}
+
+.input-field-new-comment textarea {
+  width: 100%;
+  border: 1px solid var(--dark-gray);
+  resize: none;
+  outline: none;
+  caret-color: var(--dark-gray);
+  font-size: 18px;
+  color: var(--dark-gray);
+  background-color: var(--backgroundcolor-textarea);
+}
+
+.input-field-new-comment textarea::placeholder {
+  font-weight: bold;
+}
+
+/* width */
+.input-field-new-comment textarea::-webkit-scrollbar {
+  width: 2px;
+  color: var(--dark-gray);
+  /* background: var(--dark-gray); */
+}
+
+.input-field-new-comment textarea::-webkit-scrollbar-thumb:active {
+  cursor: grabbing;
+}
+
+.input-field-new-comment textarea::-webkit-scrollbar-thumb {
+  background: var(--dark-gray);
+  border-radius: 10px;
+}
+
+.btn-new-post {
+  border: none;
+  font-size: 20px;
+  padding: 8px;
+  border-radius: 10px;
+  background: #986552;
+  box-shadow: 5px 5px 10px #754e3f, -5px -5px 10px #bb7c65;
 }

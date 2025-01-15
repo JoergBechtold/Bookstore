@@ -64,17 +64,29 @@ function templateGenerateFullscreenContent(i, newPrice) {
                <div class="comments-bookdetails width-100">
                  <h2>KOMMENTARE:</h2>
                   <div class="comments-container" id="comments_container${i}">
-                     <!-- comments generate in templates.js folder -->
+                     <!-- comments generate -->
                   </div>
 
                   <div class="input-field-new-comment" id="input_field_ner_comment">
-                    <div>
-                      <form>
-                      <textarea rows="10" cols=""></textarea><button></button>
-                      </form>
-                    </div>
+                   <textarea
+                     text-wrap:
+                     pretty
+                     cols="30"
+                     rows="2"
+                     maxlength="500"
+                     onkeyup="valideInputNewPost()"
+                     name="new-post"
+                     id="new_post_input"
+                     type="text"
+                     placeholder="Schreibe hier dein neuen Post..."
+                   ></textarea>
                   </div>
-                </div>     
+                  <div class="d-grid-center margin-top-15px">
+                   <button disabled class="btn-new-post" id="btn_new_post" onclick="newPost()">Posten</button>
+                  </div>
+                </div>    
+                
+            
         </div>   
   </div>
 
@@ -84,7 +96,7 @@ function templateGenerateFullscreenContent(i, newPrice) {
 
 function tamplateGenerateHtmlComments(bookCommentUsername, bookComment) {
   return /*html*/ `
-  <div class="d-flex margin-top">
+  <div class="d-flex margin-bottom-15px ">
       <div id="comment_username" class="comment-username">
        <span>[${bookCommentUsername}]</span>
       </div>
