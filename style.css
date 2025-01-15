@@ -260,6 +260,12 @@ td {
   background: var(--dark-gray);
 }
 
+.blablabla {
+  display: flex;
+  margin-top: 15px;
+  gap: 8px;
+}
+
 .comment-username {
   /* flex: 1; */
   width: 40%;
@@ -275,7 +281,6 @@ td {
 .comment-username,
 .comment-usertext span {
   overflow-wrap: break-word;
-  text-wrap: pretty;
 }
 
 .comment-usertext span {
@@ -321,8 +326,14 @@ td {
 .btn-new-post {
   border: none;
   font-size: 20px;
-  padding: 8px;
+  padding: 10px;
   border-radius: 10px;
   background: #986552;
   box-shadow: 5px 5px 10px #754e3f, -5px -5px 10px #bb7c65;
+}
+
+.btn-new-post:enabled:hover {
+  border-radius: 10px;
+  background: #986552;
+  box-shadow: inset 5px 5px 10px #754e3f, inset -5px -5px 10px #bb7c65;
 }

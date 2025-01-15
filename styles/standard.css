@@ -121,3 +121,8 @@ button[disabled] {
   cursor: not-allowed;
   color: var(--light-gray);
 }
+
+button {
+  cursor: pointer;
+  color: var(--dark-gray);
+}

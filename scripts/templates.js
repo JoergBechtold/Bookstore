@@ -15,7 +15,8 @@ function templateGenerateAllBooks(i, newPrice) {
 }
 
 //  Template for Fullscreen Book content
-function templateGenerateFullscreenContent(i, newPrice) {
+// in openCLoseOverlay Folder
+function templateGenerateFullScreenContent(i, newPrice, j) {
   return /*html*/ `
   <div onclick="eventBubbling(event)" class="container-bookdetails">
           <div onclick="closeFullscreenOverlay()" class="close-icon-overlay">
@@ -67,22 +68,22 @@ function templateGenerateFullscreenContent(i, newPrice) {
                      <!-- comments generate -->
                   </div>
 
-                  <div class="input-field-new-comment" id="input_field_ner_comment">
+                  <div class="input-field-new-comment" id="input_field_new_comment">
                    <textarea
                      text-wrap:
                      pretty
                      cols="30"
                      rows="2"
                      maxlength="500"
-                     onkeyup="valideInputNewPost()"
+                     onkeyup="valideInputNewPost(${i})"
                      name="new-post"
-                     id="new_post_input"
+                     id="new_post_input${i}"
                      type="text"
                      placeholder="Schreibe hier dein neuen Post..."
                    ></textarea>
                   </div>
                   <div class="d-grid-center margin-top-15px">
-                   <button disabled class="btn-new-post" id="btn_new_post" onclick="newPost()">Posten</button>
+                   <button disabled class="btn-new-post" id="btn_new_post${i}" onclick="newPost(${i})"><b>Posten</b></button>
                   </div>
                 </div>    
                 
@@ -96,9 +97,9 @@ function templateGenerateFullscreenContent(i, newPrice) {
 
 function tamplateGenerateHtmlComments(bookCommentUsername, bookComment) {
   return /*html*/ `
-  <div class="d-flex margin-bottom-15px ">
+  <div class="blablabla d-flex margin-bottom-15px ">
       <div id="comment_username" class="comment-username">
-       <span>[${bookCommentUsername}]</span>
+       <span>${bookCommentUsername}:</span>
       </div>
       <div id="comment_usertext" class="comment-usertext">
        <span>${bookComment}</span>
@@ -120,10 +121,12 @@ function likeIt(i, newPrice) {
   books[i].liked = true;
   numberoOfLikesPlus(i);
   openFullScreenOverlay(i, newPrice);
+  saveJason();
 }
 
 function dislike(i, newPrice) {
   books[i].liked = false;
   numberofLikesMinus(i);
   openFullScreenOverlay(i, newPrice);
+  saveJason();
 }

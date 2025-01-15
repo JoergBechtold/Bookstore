@@ -33,26 +33,6 @@ let books = [
         name: 'NovelLover',
         comment: 'Ein Buch, das voller magischer Überraschungen steckt und mich begeistert hat.',
       },
-      {
-        name: 'Leser123',
-        comment: 'Ein faszinierendes Abenteuerbuch, das mich von der ersten Seite an gefesselt hat.',
-      },
-      {
-        name: 'Leser123',
-        comment: 'Ein faszinierendes Abenteuerbuch, das mich von der ersten Seite an gefesselt hat.',
-      },
-      {
-        name: 'Leser123',
-        comment: 'Ein faszinierendes Abenteuerbuch, das mich von der ersten Seite an gefesselt hat.',
-      },
-      {
-        name: 'Leser123',
-        comment: 'Ein faszinierendes Abenteuerbuch, das mich von der ersten Seite an gefesselt hat.',
-      },
-      {
-        name: 'Leser123',
-        comment: 'Ein faszinierendes Abenteuerbuch, das mich von der ersten Seite an gefesselt hat.',
-      },
     ],
   },
   {
@@ -207,12 +187,14 @@ let books = [
   },
 ];
 
+loadJason();
+
 function generateAllBooks() {
   let bestsellerBookSectionRef = document.getElementById('bestseller-book-section');
   bestsellerBookSectionRef.innerHTML = '';
 
   for (let i = 0; i < books.length; i++) {
-    book = books[i];
+    // book = books[i];
     newPrice = changeThePrice(i); //Function in scripts.js folder
 
     bestsellerBookSectionRef.innerHTML += templateGenerateAllBooks(i, newPrice); //Function in scripts.js folder
@@ -231,12 +213,47 @@ function forLoobAllComments(i) {
   }
 }
 
+function valideInputNewPost(i) {
+  let newPostInputRef = document.getElementById(`new_post_input${i}`);
+  let btnNewPostRef = document.getElementById(`btn_new_post${i}`);
+  if (newPostInputRef.value.length == 0) {
+    btnNewPostRef.disabled = true;
+  } else {
+    btnNewPostRef.disabled = false;
+  }
+}
+
+function newPost(i) {
+  let newPostInputRef = document.getElementById(`new_post_input${i}`);
+  books[i].comments.unshift({ name: myProfileName, comment: newPostInputRef.value });
+  newPostInputRef.value = '';
+  forLoobAllComments(i);
+  saveJason();
+}
+
 /* number of Like Plus */
 function numberoOfLikesPlus(i) {
   books[i].likes++;
+  saveJason();
 }
 
 /* number of Likes Minus */
 function numberofLikesMinus(i) {
   books[i].likes--;
+  saveJason();
+}
+
+/* Save in Localstorage */
+function saveJason() {
+  let jasonArrayAsText = JSON.stringify(books);
+  localStorage.setItem('Bücher', jasonArrayAsText);
+}
+
+/* Load  from localstorage */
+function loadJason() {
+  let jasonArrayAsText = localStorage.getItem('Bücher');
+
+  if (jasonArrayAsText) {
+    books = JSON.parse(jasonArrayAsText);
+  }
 }
