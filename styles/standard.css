@@ -112,7 +112,6 @@ span {
 }
 
 ::-webkit-scrollbar-thumb:active {
-  /* background: var(--light-blue); */
   cursor: grabbing;
 }
 
