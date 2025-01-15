@@ -14,15 +14,11 @@
   width: 200px;
   transition: 0.225s ease-in-out;
   cursor: pointer;
-
-  &:hover {
-    scale: 1.1;
-  }
 }
 
-/* .single-book-main-view:hover {
+.single-book-main-view:hover {
   scale: 1.1;
-} */
+}
 
 .single-book-main-view img {
   margin-top: 10px;

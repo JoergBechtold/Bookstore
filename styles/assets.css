@@ -1,1 +1,39 @@
 /* This is where the style of buttons, for example, comes in */
+
+button:disabled,
+button[disabled] {
+  cursor: not-allowed;
+  color: var(--light-gray);
+}
+
+button {
+  cursor: pointer;
+  color: var(--dark-gray);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-text);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-gray);
+  cursor: grab;
+}
+
+::-webkit-scrollbar-thumb:active {
+  cursor: grabbing;
+}
