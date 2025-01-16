@@ -20,60 +20,49 @@
 
 @media screen and (max-width: 1500px) {
   .container-bookdetails {
-    width: 58%;
+    width: 62%;
   }
 }
 
 @media screen and (max-width: 1450px) {
   .container-bookdetails {
-    width: 62%;
+    width: 64%;
   }
 }
 
 @media screen and (max-width: 1400px) {
   .container-bookdetails {
-    width: 64%;
+    width: 66%;
   }
 }
 
 @media screen and (max-width: 1350px) {
   .container-bookdetails {
-    width: 66%;
+    width: 68%;
   }
 }
 
 @media screen and (max-width: 1300px) {
   .container-bookdetails {
-    width: 68%;
+    width: 70%;
   }
 }
 
 @media screen and (max-width: 1250px) {
   .container-bookdetails {
-    width: 70%;
+    width: 72%;
   }
 }
 
 @media screen and (max-width: 1200px) {
   .container-bookdetails {
-    width: 72%;
+    width: 74%;
   }
 }
-@media screen and (max-width: 1070px) {
-  .navbar-links a {
-    font-size: 18px;
-  }
 
-  .navbar-icon-headline h1 {
-    font-size: 22px;
-  }
-
-  .headline-bestseller h2 {
-    font-size: 20px;
-  }
-
-  .navbar-icon-headline img a {
-    height: 62px;
+@media screen and (max-width: 1100px) {
+  .container-bookdetails {
+    width: 80%;
   }
 }
 
@@ -102,6 +91,45 @@
   }
 }
 
+@media screen and (max-width: 992px) {
+  tbody th {
+    font-size: 17px;
+  }
+
+  .content-bookdetails {
+    grid-template-columns: 45% 55%;
+    grid-template-rows: 55%;
+    grid-template-areas:
+      'eins zwei'
+      'drei drei';
+    width: 100%;
+  }
+
+  .img-bookdetails-box {
+    max-width: 76%;
+  }
+
+  .comments-container {
+    height: 150px;
+  }
+
+  .price-likes {
+    justify-content: unset;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .likes-liked {
+    justify-content: start;
+  }
+
+  .heart-box {
+    width: 40px;
+    margin-left: 3px;
+  }
+}
+
 @media screen and (max-width: 910px) {
   .navbar-links {
     gap: 16px;
@@ -122,6 +150,15 @@
   }
 }
 
+@media screen and (max-width: 800px) {
+  .close-icon-overlay {
+    width: 46px;
+  }
+  .img-bookdetails-box {
+    max-width: 82%;
+  }
+}
+
 @media screen and (max-width: 760px) {
   .headline-bestseller {
     padding: 0 30px 0 30px;
@@ -129,13 +166,13 @@
   }
 }
 
-@media screen and (max-width: 670px) {
-  .burger-menu img {
-    width: 35px;
+@media screen and (max-width: 740px) {
+  .right-content-bookdetails h1 {
+    font-size: 19px;
   }
 }
 
-@media screen and (max-width: 658px) {
+@media screen and (max-width: 675px) {
   .main-container {
     padding: 0;
     margin: 0;
@@ -146,6 +183,45 @@
 
   .bestseller-book-section {
     margin-bottom: 35px;
+  }
+
+  .container-bookdetails {
+    height: 100dvh;
+    width: 100%;
+    max-height: unset;
+    border-radius: unset;
+    box-shadow: none;
+  }
+
+  .img-bookdetails-box {
+    max-width: 87%;
+  }
+
+  .comments-container {
+    height: 245px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .burger-menu img {
+    width: 35px;
+  }
+}
+
+@media screen and (max-width: 535px) {
+  .close-icon-overlay {
+    width: 40px;
+    border-radius: 7px;
+  }
+
+  .btn-new-post {
+    font-size: 18px;
+
+    border-radius: 7px;
+  }
+
+  .input-field-new-comment textarea::placeholder {
+    font-size: 16px;
   }
 }
 
@@ -184,7 +260,7 @@
 
 @media screen and (max-width: 410px) {
   .navbar-icon-headline img {
-    width: 40px;
+    height: 40px;
   }
 
   .navbar-icon-headline h1 {
@@ -194,26 +270,36 @@
 
 @media screen and (max-width: 370px) {
   .burger-menu img {
-    width: 23px;
+    width: 20px;
+  }
+
+  .navbar-icon-headline {
+    gap: 8px;
   }
 
   .navbar-icon-headline h1 {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .headline-bestseller h2 {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .single-book-main-view span {
-    font-size: 13px;
-  }
-
-  .navbar-icon-headline img {
-    height: 40px;
+    font-size: 15px;
   }
 
   .navbar {
     height: 60px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .burger-menu img {
+    width: 16px;
+  }
+
+  .navbar-icon-headline img {
+    height: 35px;
   }
 }

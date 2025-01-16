@@ -107,9 +107,9 @@
 .container-bookdetails {
   overflow-y: auto;
   position: relative;
-  /* max-height: 85%; */
-  height: auto;
-  width: 55%;
+  max-height: 85%;
+  /* height: auto; */
+  width: 60%;
   display: flex;
   align-items: start;
   background-color: var(--color-text);
@@ -127,14 +127,21 @@
 }
 
 .content-bookdetails {
-  display: flex;
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: 45% 50%;
+  /* grid-template-rows: 70% 70%; */
+  grid-template-areas:
+    'eins zwei'
+    'eins drei';
   width: 100%;
 
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .right-content-bookdetails {
-  width: 50%;
+  /* width: 50%; */
+  grid-area: zwei;
 }
 
 .right-content-bookdetails h1 {
@@ -168,7 +175,6 @@ p {
 
 .heart-box {
   position: relative;
-  perspective: 1000px;
   display: flex;
   width: 50px;
   aspect-ratio: 1/1;
@@ -195,6 +201,8 @@ p {
   background: #986552;
   box-shadow: 5px 5px 10px #754e3f, -5px -5px 10px #bb7c65;
   cursor: pointer;
+  /* transition: all 3s ease-in-out; */
+  /* transition: all 3s ease-out; */
 }
 
 .close-icon-overlay:hover,
@@ -210,12 +218,18 @@ p {
   width: inherit;
 }
 
-.img-bookdetails {
-  box-shadow: var(--box-shadow-book);
+.img-bookdetails-box {
+  max-width: 90%;
+  /* max-width: 435px; */
+  /* height: 60%; */
+  background-color: transparent;
+  grid-area: eins;
+}
 
-  max-width: 40%;
-  height: 60%;
+.img-bookdetails {
   object-fit: cover;
+  width: 100%;
+  box-shadow: var(--box-shadow-book);
   border-radius: var(--border-radius);
 }
 
@@ -226,6 +240,7 @@ p {
 
 .comments-bookdetails {
   padding: var(--padding-top-bottom);
+  grid-area: drei;
 }
 
 .comments-container {
@@ -249,12 +264,19 @@ p {
   background: var(--dark-gray);
 }
 
+.comments-content {
+  width: 100%;
+  gap: 2%;
+  display: flex;
+  margin-top: 15px;
+}
+
 .comment-username {
   width: 40%;
 }
 
 .comment-usertext {
-  width: 60%;
+  width: 58%;
 }
 
 .comment-username,
@@ -276,6 +298,7 @@ p {
   border: 1px solid var(--dark-gray);
   resize: none;
   outline: none;
+  padding-left: 3px;
   caret-color: var(--dark-gray);
   font-size: 18px;
   color: var(--dark-gray);
@@ -293,6 +316,7 @@ p {
   border-radius: 10px;
   background: #986552;
   box-shadow: 5px 5px 10px #754e3f, -5px -5px 10px #bb7c65;
+  /* transition: all 3s ease-out; */
 }
 .btn-new-post:enabled:hover,
 .btn-new-post:enabled:focus,

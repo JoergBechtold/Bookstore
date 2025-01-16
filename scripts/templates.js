@@ -16,16 +16,18 @@ function templateGenerateAllBooks(i, newPrice) {
 
 //  Template for Fullscreen Book content
 // in openCLoseOverlay Folder
-function templateGenerateFullScreenContent(i, newPrice, j) {
+function templateGenerateFullScreenContent(i, newPrice) {
   return /*html*/ `
   <div onclick="eventBubbling(event)" class="container-bookdetails">
           <div onclick="closeFullscreenOverlay()" class="close-icon-overlay">
             <img src="assets/icons/icon-close-50.png" />
           </div>
           <div class="content-bookdetails">
-              <img class=" img-bookdetails" id="img_bookdetails" src="${books[i].bookImg}" alt="Bild vom Buch ${books[i].name}" />
+            <div class="img-bookdetails-box">
+              <img class="img-bookdetails" id="img_bookdetails" src="${books[i].bookImg}" alt="Bild vom Buch ${books[i].name}" />
+              </div>
             <div  class="right-content-bookdetails">
-              <div  class="">
+              <div>
                 <h1 id="headline_bookdetails"><u>${books[i].name}</u></h1>
               </div>
 
@@ -36,7 +38,7 @@ function templateGenerateFullScreenContent(i, newPrice, j) {
                
                 <div class="likes-liked" >
                   <div>
-                   <p>Gefällt&nbsp&nbsp${books[i].likes}</p>
+                   <p>Gefällt:&nbsp&nbsp${books[i].likes}</p>
                   </div>
                   <div class="heart-box">
                     <!-- generate red / gray heart -->
@@ -49,21 +51,38 @@ function templateGenerateFullScreenContent(i, newPrice, j) {
                 <table>
                   <tr>
                     <th>AUTOR</th>
-                    <td>:&nbsp&nbsp${books[i].author}</td>
+                    <td>:</td>
+                    <td class="padding-left-5px">${books[i].author}</td>
                   </tr>
                   <tr>
                     <th>ERSCHEINUNGSJAHR</th>
-                    <td>:&nbsp&nbsp${books[i].publishedYear}</td>
+                    <td>:</td>
+                    <td class="padding-left-5px">${books[i].publishedYear}</td>
                   </tr>
                   <tr>
                     <th>GENRE</th>
-                    <td>:&nbsp&nbsp${books[i].genre}</td>
+                    <td>:</td>
+                    <td class="padding-left-5px">${books[i].genre}</td>
                   </tr>
                 </table>
                </div>
 
-               <div class="comments-bookdetails width-100">
-                 <h2>KOMMENTARE:</h2>
+                   
+          </div>  
+          <div class="comments-bookdetails width-100">
+                 ${generateCommentSection(i)}
+               </div> 
+          
+          
+  </div>
+             
+
+`;
+}
+
+function generateCommentSection(i) {
+  return /*html*/ `
+     <h2>KOMMENTARE:</h2>
                   <div class="comments-container" id="comments_container${i}">
                      <!-- comments generate -->
                   </div>
@@ -85,21 +104,14 @@ function templateGenerateFullScreenContent(i, newPrice, j) {
                   <div class="d-grid-center margin-top-15px">
                    <button disabled class="btn-new-post" id="btn_new_post${i}" onclick="newPost(${i})"><b>Posten</b></button>
                   </div>
-                </div>    
-                
-            
-        </div>   
-  </div>
-
-
-`;
+  `;
 }
 
 function tamplateGenerateHtmlComments(bookCommentUsername, bookComment) {
   return /*html*/ `
-  <div class="gab-10px d-flex margin-bottom-15px ">
+  <div class="comments-content">
       <div id="comment_username" class="comment-username">
-       <span>${bookCommentUsername}:</span>
+       <span>${bookCommentUsername}</span>
       </div>
       <div id="comment_usertext" class="comment-usertext">
        <span>${bookComment}</span>
