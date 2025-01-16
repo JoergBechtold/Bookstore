@@ -97,7 +97,7 @@ function templateGenerateFullScreenContent(i, newPrice, j) {
 
 function tamplateGenerateHtmlComments(bookCommentUsername, bookComment) {
   return /*html*/ `
-  <div class="blablabla d-flex margin-bottom-15px ">
+  <div class="gab-10px d-flex margin-bottom-15px ">
       <div id="comment_username" class="comment-username">
        <span>${bookCommentUsername}:</span>
       </div>

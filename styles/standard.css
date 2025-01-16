@@ -36,6 +36,10 @@ body {
   --padding-top-bottom: 20px 0 20px 0;
 }
 
+.gab-10px {
+  gap: 10px;
+}
+
 .d-flex {
   display: flex;
 }
@@ -95,5 +99,6 @@ td {
   font-size: 20px;
   color: var(--dark-gray);
   text-align: left;
-  white-space: nowrap;
+  /* white-space: nowrap; */
+  overflow-wrap: break-word;
 }
