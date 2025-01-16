@@ -228,7 +228,16 @@ function newPost(i) {
   books[i].comments.unshift({ name: myProfileName, comment: newPostInputRef.value });
   newPostInputRef.value = '';
   forLoobAllComments(i);
+
   saveJason();
+  scrollToTop(i);
+  valideInputNewPost(i);
+}
+
+function scrollToTop(i) {
+  let commentsContainerRef = document.getElementById(`comments_container${i}`);
+
+  return (commentsContainerRef.scrollTop = 0);
 }
 
 /* number of Like Plus */
