@@ -286,21 +286,6 @@ p {
   font-weight: bold;
 }
 
-/* width */
-.input-field-new-comment textarea::-webkit-scrollbar {
-  width: 2px;
-  color: var(--dark-gray);
-}
-
-.input-field-new-comment textarea::-webkit-scrollbar-thumb:active {
-  cursor: grabbing;
-}
-
-.input-field-new-comment textarea::-webkit-scrollbar-thumb {
-  background: var(--dark-gray);
-  border-radius: 10px;
-}
-
 .btn-new-post {
   border: none;
   font-size: 20px;
