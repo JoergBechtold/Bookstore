@@ -130,6 +130,7 @@
   /* display: flex; */
   display: grid;
   grid-template-columns: 45% 50%;
+  column-gap: 5%;
   /* grid-template-rows: 70% 70%; */
   grid-template-areas:
     'eins zwei'
@@ -153,7 +154,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid var(--dark-gray);
+  border-bottom: var(--border-container);
 }
 
 .price-likes span,
@@ -222,6 +223,7 @@ p {
   max-width: 90%;
   /* max-width: 435px; */
   /* height: 60%; */
+  height: fit-content;
   background-color: transparent;
   grid-area: eins;
 }
@@ -235,7 +237,7 @@ p {
 
 .bookdetails-table {
   padding: var(--padding-top-bottom);
-  border-bottom: 1px solid var(--dark-gray);
+  border-bottom: var(--border-container);
 }
 
 .comments-bookdetails {
@@ -249,7 +251,7 @@ p {
   height: 245px;
   margin-top: 10px;
   overflow-y: scroll;
-  padding: var(--padding-top-bottom);
+  padding: 10px 0 20px 0;
 }
 
 .comments-container::-webkit-scrollbar {
@@ -268,15 +270,13 @@ p {
   width: 100%;
   gap: 2%;
   display: flex;
-  margin-top: 15px;
+  flex-direction: column;
+  margin-top: 10px;
 }
 
-.comment-username {
-  width: 40%;
-}
-
+.comment-username,
 .comment-usertext {
-  width: 58%;
+  width: 98%;
 }
 
 .comment-username,

@@ -7,10 +7,8 @@ function templateGenerateAllBooks(i, newPrice) {
             <span>${books[i].name}</span>
             
             <span style="font-weight: 100">${books[i].author}</span>
-            <span>${newPrice}€</span>
-            
-          </div>
-         
+            <span>${newPrice}€</span>    
+          </div>   
         `;
 }
 
@@ -50,18 +48,18 @@ function templateGenerateFullScreenContent(i, newPrice) {
               <div class="bookdetails-table">
                 <table>
                   <tr>
-                    <th>AUTOR</th>
-                    <td>:</td>
+                    <th>AUTOR:</th>
+                    <!-- <td>:</td> -->
                     <td class="padding-left-5px">${books[i].author}</td>
                   </tr>
                   <tr>
-                    <th>ERSCHEINUNGSJAHR</th>
-                    <td>:</td>
+                    <th>ERSCHEINUNGSJAHR:</th>
+                    <!-- <td>:</td> -->
                     <td class="padding-left-5px">${books[i].publishedYear}</td>
                   </tr>
                   <tr>
-                    <th>GENRE</th>
-                    <td>:</td>
+                    <th>GENRE:</th>
+                    <!-- <td>:</td> -->
                     <td class="padding-left-5px">${books[i].genre}</td>
                   </tr>
                 </table>
@@ -69,14 +67,10 @@ function templateGenerateFullScreenContent(i, newPrice) {
 
                    
           </div>  
-          <div class="comments-bookdetails width-100">
+               <div class="comments-bookdetails width-100">
                  ${generateCommentSection(i)}
-               </div> 
-          
-          
+               </div>      
   </div>
-             
-
 `;
 }
 
@@ -101,7 +95,7 @@ function generateCommentSection(i) {
                      placeholder="Schreibe hier dein neuen Post..."
                    ></textarea>
                   </div>
-                  <div class="d-grid-center margin-top-15px">
+                  <div class="d-grid-center margin-top-15px .margin-bottom-15px">
                    <button disabled class="btn-new-post" id="btn_new_post${i}" onclick="newPost(${i})"><b>Posten</b></button>
                   </div>
   `;
@@ -111,7 +105,7 @@ function tamplateGenerateHtmlComments(bookCommentUsername, bookComment) {
   return /*html*/ `
   <div class="comments-content">
       <div id="comment_username" class="comment-username">
-       <span>${bookCommentUsername}</span>
+       <span><u>${bookCommentUsername}:</u></span>
       </div>
       <div id="comment_usertext" class="comment-usertext">
        <span>${bookComment}</span>

@@ -1,4 +1,4 @@
-let myProfileName = 'jörg_Bechtold123';
+let myProfileName = 'jörg-Bechtold123';
 
 let newPrice = 0;
 
