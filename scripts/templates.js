@@ -122,17 +122,3 @@ function getLikedImgTemlate(i, newPrice) {
     return `<img onclick="likeIt(${i}, '${newPrice}')" id="heart_icon_like${i}" class="heart-black width-100" src="assets/icons/icon-herz-grau-50.png" alt="Bild vom schwarzen Like Herz" />`;
   }
 }
-
-function likeIt(i, newPrice) {
-  books[i].liked = true;
-  numberoOfLikesPlus(i);
-  openFullScreenOverlay(i, newPrice);
-  saveJason();
-}
-
-function dislike(i, newPrice) {
-  books[i].liked = false;
-  numberofLikesMinus(i);
-  openFullScreenOverlay(i, newPrice);
-  saveJason();
-}

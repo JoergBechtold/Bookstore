@@ -108,8 +108,8 @@
   overflow-y: auto;
   position: relative;
   max-height: 85%;
-  /* height: auto; */
-  width: 60%;
+  max-width: 1175px;
+  margin-inline: 70px;
   display: flex;
   align-items: start;
   background-color: var(--color-text);
@@ -131,7 +131,7 @@
   display: grid;
   grid-template-columns: 45% 50%;
   column-gap: 5%;
-  /* grid-template-rows: 70% 70%; */
+  grid-template-rows: 40%;
   grid-template-areas:
     'eins zwei'
     'eins drei';
@@ -220,7 +220,8 @@ p {
 }
 
 .img-bookdetails-box {
-  max-width: 90%;
+  max-width: 85%;
+  /* height: 100%; */
   /* max-width: 435px; */
   /* height: 60%; */
   height: fit-content;
