@@ -3,3 +3,7 @@ function changeThePrice(i) {
   let newPrice = toFixedPrice.replace('.', ',');
   return newPrice;
 }
+
+function eventBubbling(event) {
+  event.stopPropagation();
+}

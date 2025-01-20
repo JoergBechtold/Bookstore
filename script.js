@@ -187,14 +187,11 @@ let books = [
   },
 ];
 
-loadJason();
-
 function generateAllBooks() {
   let bestsellerBookSectionRef = document.getElementById('bestseller-book-section');
   bestsellerBookSectionRef.innerHTML = '';
 
   for (let i = 0; i < books.length; i++) {
-    // book = books[i];
     newPrice = changeThePrice(i); //Function in scripts.js folder
 
     bestsellerBookSectionRef.innerHTML += templateGenerateAllBooks(i, newPrice); //Function in scripts.js folder
@@ -265,4 +262,20 @@ function loadJason() {
   if (jasonArrayAsText) {
     books = JSON.parse(jasonArrayAsText);
   }
+}
+
+// like
+function likeIt(i, newPrice) {
+  books[i].liked = true;
+  numberoOfLikesPlus(i);
+  openFullScreenOverlay(i, newPrice);
+  saveJason();
+}
+
+// dislike
+function dislike(i, newPrice) {
+  books[i].liked = false;
+  numberofLikesMinus(i);
+  openFullScreenOverlay(i, newPrice);
+  saveJason();
 }
